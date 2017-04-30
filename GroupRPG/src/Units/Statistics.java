@@ -15,5 +15,5 @@ public interface Statistics {
     public int getHealth();
     public int getEndurance();
     public int getSpirit();
-    
+    public String getCombineStat();
 }

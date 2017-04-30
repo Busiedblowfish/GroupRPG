@@ -2,8 +2,8 @@
 package Units;
 
 public class enemy_Marauder implements Statistics {
-    private String name = "Marauder";
-    private String weapon = "Battle Axe";
+    private final String name = "Marauder";
+    private final String weapon = "Battle Axe";
     private int armor = 3;
     private int speed = 1;
     private int attack_s = 4;
@@ -15,19 +15,50 @@ public class enemy_Marauder implements Statistics {
     
     public enemy_Marauder(){}
     
+    @Override
     public String getName(){ return name; }
+    @Override
     public String getWeapon(){ return weapon; }
+    @Override
     public int getArmor(){ return armor; }
+    @Override
     public int getSpeed(){ return speed; }
+    @Override
     public int getAttack_s(){ return attack_s; }
+    @Override
     public int getBlock_s(){ return block_s; }
+    @Override
     public int getHealth(){ return health; }
+    @Override
     public int getEndurance(){ return endurance; }
+    @Override
     public int getSpirit(){ return spirit; }
         
     private void setHealth(int h){ health = h; }
     private void setEndurance(int e){ endurance =  e;}
     private void setSpirit(int s){ spirit = s; }
+    
+    
+    /**
+     *
+     * @return the formatted string version of Enemy_Marauder statistics
+     */
+    @Override
+    public String getCombineStat() 
+    {
+        return String.format
+        (
+            "Name: " + this.getName() + "\n"
+            + "Weapon: " + this.getWeapon() + "\n"
+            + "Armor: " + this.getArmor() + "\n"
+            + "Speed: " + this.getSpeed() + "\n"
+            + "Attack: " + this.getAttack_s() + "\n"
+            + "Block: " + this.getBlock_s() + "\n"
+            + "Health: " + this.getHealth() + "\n"
+            + "Endurance: " + this.getEndurance() + "\n"
+            + "Spirit: " + this.getSpirit() + "\n"
+        );
+    }
     
 //    @Override
 //    public int Recover(){

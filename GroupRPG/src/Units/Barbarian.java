@@ -2,8 +2,8 @@
 package Units;
 
 public class Barbarian implements Statistics {
-    private String name = "Barbarian";    //Variable to overwrite default name
-    private String weapon = "Dual Axes";
+    private final String name = "Barbarian";    //Variable to overwrite default name
+    private final String weapon = "Dual Axes";
     private int armor = 2;
     private int speed = 3;
     private int attack_s = 3;
@@ -14,19 +14,51 @@ public class Barbarian implements Statistics {
     
     public Barbarian(){}
     
+    @Override
     public String getName(){ return name; }
+    @Override
     public String getWeapon(){ return weapon; }
+    @Override
     public int getArmor(){ return armor; }
+    @Override
     public int getSpeed(){ return speed; }
+    @Override
     public int getAttack_s(){ return attack_s; }
+    @Override
     public int getBlock_s(){ return block_s; }
+    @Override
     public int getHealth(){ return health; }
+    @Override
     public int getEndurance(){ return endurance; }
+    @Override
     public int getSpirit(){ return spirit; }
     
     private void setHealth(int h){ health = h; }
     private void setEndurance(int e){ endurance =  e;}
     private void setSpirit(int s){ spirit = s; }
+    
+    
+    /**
+     *
+     * @return the formatted string version of Barbarian statistics
+     */
+    @Override
+    public String getCombineStat() 
+    {
+        return String.format
+        (
+            "Name: " + this.getName() + "\n"
+            + "Weapon: " + this.getWeapon() + "\n"
+            + "Armor: " + this.getArmor() + "\n"
+            + "Speed: " + this.getSpeed() + "\n"
+            + "Attack: " + this.getAttack_s() + "\n"
+            + "Block: " + this.getBlock_s() + "\n"
+            + "Health: " + this.getHealth() + "\n"
+            + "Endurance: " + this.getEndurance() + "\n"
+            + "Spirit: " + this.getSpirit() + "\n"
+        );
+    }
+
     
 //    @Override
 //    public int Recover(){
@@ -45,4 +77,5 @@ public class Barbarian implements Statistics {
 //    public void sprtSkill_1(){ /*Uses spirit */ }
 //    
 //    public void sprtSkill_2(){ /*Uses spirit*/ }
+
 }
