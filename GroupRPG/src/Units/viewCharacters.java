@@ -6,6 +6,7 @@
 package Units;
 
 import java.awt.Font;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,7 +19,9 @@ public class viewCharacters extends javax.swing.JFrame {
      */
     public viewCharacters() {
         initComponents();
+       
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -328,8 +331,7 @@ public class viewCharacters extends javax.swing.JFrame {
     private void btnNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewGameActionPerformed
         // TODO add your handling code here:
         
-        //Disable the new game button
-        btnNewGame.setEnabled(false);
+        this.setVisible(false);
         
         //Launch GameGUI
         new GameGUI().setVisible(true);
