@@ -130,6 +130,9 @@
       <SubComponents>
         <Component class="javax.swing.JToggleButton" name="btnEnemy1">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/pics/psycic.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Marauder"/>
           </Properties>
           <Events>
@@ -165,6 +168,9 @@
       <SubComponents>
         <Component class="javax.swing.JToggleButton" name="btnEnemy2">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/pics/psycic.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Brute"/>
           </Properties>
           <Events>
@@ -314,6 +320,9 @@
       <SubComponents>
         <Component class="javax.swing.JToggleButton" name="btnEnemy3">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/pics/psycic.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Rogue"/>
           </Properties>
           <Events>
@@ -352,6 +361,9 @@
       <SubComponents>
         <Component class="javax.swing.JToggleButton" name="btnEnemy4">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/pics/psycic.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Assassin"/>
           </Properties>
           <Events>
@@ -425,6 +437,9 @@
       <SubComponents>
         <Component class="javax.swing.JToggleButton" name="btnEnemy5">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/pics/psycic.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Summoner"/>
           </Properties>
           <Events>
@@ -460,6 +475,9 @@
       <SubComponents>
         <Component class="javax.swing.JToggleButton" name="btnEnemy6">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/pics/psycic.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Warlock"/>
           </Properties>
           <Events>

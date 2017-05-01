@@ -629,14 +629,14 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
             console2.setText("PLAYER WON");
             
             //Display the result and offer available options
-            combatOutCome();
+            combatOutcome();
         }
         if(STORY == 6){
             console1.setText("ENEMY WON");
             console2.setText("ENEMY WON");
             
             //Display the result and offer available options
-            combatOutCome();
+            combatOutcome();
 
         }
         /**** BATTLE LOOP ****/
@@ -901,17 +901,16 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
     /**
      * Displays a jOptionPane based on the outcome of the combat
      */
-    public void combatOutCome()
+    public void combatOutcome()
     {
 	//Create objects of possible outcome
 	Object[] option = {"Yes, please", "No way!"};
 	String title = null;
         ImageIcon icon = null;
         int input;
-        JLabel question = new JLabel();  
-        question.setVerticalTextPosition(SwingConstants.BOTTOM);
-        question.setHorizontalTextPosition(SwingConstants.CENTER);
-        
+        String msg = "Would you like to play again?";
+        JLabel question = new JLabel(msg);     
+       
 	if(STORY == 6)
         {
             title = "Enemy Won!";
@@ -944,6 +943,10 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
             }        
         }
         
+        
+        question.setVerticalTextPosition(SwingConstants.BOTTOM);
+        question.setHorizontalTextPosition(SwingConstants.CENTER);
+        
         input = JOptionPane.showOptionDialog(
         null, 
         question,
@@ -953,6 +956,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
         icon,
         option, 
         option[0]);
+        
 
         if(input == 0)
         {
@@ -964,6 +968,18 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
 
             //reset the STORY
             STORY = 0;
+            UnitList.clear();
+            TurnList.clear();
+           // POSITION = new String [6][2];
+            PLAYER_COUNT = 0;
+            ENEMY_COUNT = 0;
+            BATTLE_LOCK = 0;
+            CONSOLE_LOCK = 0;
+            TURN = 0;
+            LOOP = 1;
+            SELECTED_PLAYER = -1;
+            SELECTED_ENEMY = -1;                    
+            
         }
         else
         {
@@ -1066,6 +1082,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
 
         enemy1.setBackground(new java.awt.Color(51, 0, 255));
 
+        btnEnemy1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psycic.png"))); // NOI18N
         btnEnemy1.setText("Marauder");
         btnEnemy1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1077,17 +1094,18 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
         enemy1.setLayout(enemy1Layout);
         enemy1Layout.setHorizontalGroup(
             enemy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+            .addComponent(btnEnemy1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, Short.MAX_VALUE)
         );
         enemy1Layout.setVerticalGroup(
             enemy1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy1, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(btnEnemy1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, Short.MAX_VALUE)
         );
 
         getContentPane().add(enemy1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, -1, -1));
 
         enemy4.setBackground(new java.awt.Color(51, 153, 0));
 
+        btnEnemy2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psycic.png"))); // NOI18N
         btnEnemy2.setText("Brute");
         btnEnemy2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1099,11 +1117,11 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
         enemy4.setLayout(enemy4Layout);
         enemy4Layout.setHorizontalGroup(
             enemy4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy2, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+            .addComponent(btnEnemy2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, Short.MAX_VALUE)
         );
         enemy4Layout.setVerticalGroup(
             enemy4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy2, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(btnEnemy2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, Short.MAX_VALUE)
         );
 
         getContentPane().add(enemy4, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, -1, -1));
@@ -1179,6 +1197,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
 
         enemy2.setBackground(new java.awt.Color(102, 0, 102));
 
+        btnEnemy3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psycic.png"))); // NOI18N
         btnEnemy3.setText("Rogue");
         btnEnemy3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1190,11 +1209,11 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
         enemy2.setLayout(enemy2Layout);
         enemy2Layout.setHorizontalGroup(
             enemy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy3, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+            .addComponent(btnEnemy3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, Short.MAX_VALUE)
         );
         enemy2Layout.setVerticalGroup(
             enemy2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy3, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(btnEnemy3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, Short.MAX_VALUE)
         );
 
         getContentPane().add(enemy2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 177, -1, -1));
@@ -1202,6 +1221,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
         enemy5.setBackground(new java.awt.Color(0, 102, 102));
         enemy5.setPreferredSize(new java.awt.Dimension(250, 176));
 
+        btnEnemy4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psycic.png"))); // NOI18N
         btnEnemy4.setText("Assassin");
         btnEnemy4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1213,11 +1233,11 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
         enemy5.setLayout(enemy5Layout);
         enemy5Layout.setHorizontalGroup(
             enemy5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy4, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+            .addComponent(btnEnemy4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, Short.MAX_VALUE)
         );
         enemy5Layout.setVerticalGroup(
             enemy5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy4, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(btnEnemy4, javax.swing.GroupLayout.PREFERRED_SIZE, 176, Short.MAX_VALUE)
         );
 
         getContentPane().add(enemy5, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 177, -1, -1));
@@ -1247,6 +1267,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
 
         enemy3.setBackground(new java.awt.Color(153, 51, 0));
 
+        btnEnemy5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psycic.png"))); // NOI18N
         btnEnemy5.setText("Summoner");
         btnEnemy5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1258,17 +1279,18 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
         enemy3.setLayout(enemy3Layout);
         enemy3Layout.setHorizontalGroup(
             enemy3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy5, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+            .addComponent(btnEnemy5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, Short.MAX_VALUE)
         );
         enemy3Layout.setVerticalGroup(
             enemy3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy5, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(btnEnemy5, javax.swing.GroupLayout.PREFERRED_SIZE, 176, Short.MAX_VALUE)
         );
 
         getContentPane().add(enemy3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 354, -1, -1));
 
         enemy6.setBackground(new java.awt.Color(0, 255, 102));
 
+        btnEnemy6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psycic.png"))); // NOI18N
         btnEnemy6.setText("Warlock");
         btnEnemy6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1280,11 +1302,11 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
         enemy6.setLayout(enemy6Layout);
         enemy6Layout.setHorizontalGroup(
             enemy6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy6, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+            .addComponent(btnEnemy6, javax.swing.GroupLayout.PREFERRED_SIZE, 250, Short.MAX_VALUE)
         );
         enemy6Layout.setVerticalGroup(
             enemy6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnEnemy6, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+            .addComponent(btnEnemy6, javax.swing.GroupLayout.PREFERRED_SIZE, 176, Short.MAX_VALUE)
         );
 
         getContentPane().add(enemy6, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 354, 250, -1));
