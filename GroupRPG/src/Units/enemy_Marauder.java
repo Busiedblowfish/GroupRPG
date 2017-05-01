@@ -34,9 +34,12 @@ public class enemy_Marauder implements Statistics {
     @Override
     public int getSpirit(){ return spirit; }
         
-    private void setHealth(int h){ health = h; }
-    private void setEndurance(int e){ endurance =  e;}
-    private void setSpirit(int s){ spirit = s; }
+    @Override
+    public void setHealth(int h){ health += h; }
+    @Override
+    public void setEndurance(int e){ endurance +=  e;}
+    @Override
+    public void setSpirit(int s){ spirit += s; }
     
     
     /**
@@ -60,21 +63,4 @@ public class enemy_Marauder implements Statistics {
         );
     }
     
-//    @Override
-//    public int Recover(){
-//        setHealth(getHealth() + 2); setEndurance(getEndurance() + 1); setSpirit(getSpirit() + 1); return 1;
-//    }
-//    
-//    @Override
-//    public int Attack(int Defender_health, int Attacker_damage){
-//        return Defender_health - Attacker_damage;
-//    }
-//    
-//    public void Heavy_Blow(){ 
-//        System.out.printf("The enemy Marauder swings with a Heavy Blow.\nTarget suffers -1 Attack for 2 turns.\nCosts Endurance\n");
-//    }
-//    
-//    public void Flame_Bomb(){
-//        System.out.printf("The enemy Marauder throws a Flame Bomb.\nTarget suffers 1 damage for 2 turns.\nCosts Spirit\n");
-//    }
 }

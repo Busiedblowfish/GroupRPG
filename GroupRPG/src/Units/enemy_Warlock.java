@@ -33,9 +33,12 @@ public class enemy_Warlock implements Statistics {
     @Override
     public int getSpirit(){ return spirit; }
     
-    private void setHealth(int h){ health = h; }
-    private void setEndurance(int e){ endurance =  e;}
-    private void setSpirit(int s){ spirit = s; }
+    @Override
+    public void setHealth(int h){ health += h; }
+    @Override
+    public void setEndurance(int e){ endurance +=  e;}
+    @Override
+    public void setSpirit(int s){ spirit += s; }
     
     /**
      *
@@ -57,22 +60,5 @@ public class enemy_Warlock implements Statistics {
             + "Spirit: " + this.getSpirit() + "\n"
         );
     }
-    
-//    @Override
-//    public int Recover(){
-//        setHealth(getHealth() + 1); setEndurance(getEndurance() + 1); setSpirit(getSpirit() + 2); return 1;
-//    }
-//    
-//    @Override
-//    public int Attack(int Defender_health, int Attacker_damage){
-//        return Defender_health - Attacker_damage;
-//    }
-//        
-//    public void Lightning_Bolt(){
-//        System.out.printf("The enemy Warlock fires a Lightning Bolt.\nTarget is stunned for 1 turn.\nCosts Endurance\n");
-//    }
-//    
-//    public void Draining_Curse(){
-//        System.out.printf("The enemy Warlock casts a Draining Curses.\nTarget suffers 1 damage for 2 turns.\nCosts Spirit\n");
-//    }
+ 
 }

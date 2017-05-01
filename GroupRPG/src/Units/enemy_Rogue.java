@@ -33,10 +33,12 @@ public class enemy_Rogue implements Statistics {
     @Override
     public int getSpirit(){ return spirit; }
     
-    private void setHealth(int h){ health = h; }
-    private void setEndurance(int e){ endurance =  e;}
-    private void setSpirit(int s){ spirit = s; }
-    
+    @Override
+    public void setHealth(int h){ health += h; }
+    @Override
+    public void setEndurance(int e){ endurance +=  e;}
+    @Override
+    public void setSpirit(int s){ spirit += s; }    
     
     /**
      *
@@ -58,22 +60,5 @@ public class enemy_Rogue implements Statistics {
             + "Spirit: " + this.getSpirit() + "\n"
         );
     }
-    
-//    @Override
-//    public int Recover(){
-//        setHealth(getHealth() + 1); setEndurance(getEndurance() + 2); setSpirit(getSpirit() + 1); return 1;
-//    }
-//    
-//    @Override
-//    public int Attack(int Defender_health, int Attacker_damage){
-//        return Defender_health - Attacker_damage;
-//    }
-//    
-//    public void Double_Strike(){
-//        System.out.printf("The enemy Rogue makes a Double Strike.\nUnit receives +1 Speed for 2 turns.\nCosts Endurance\n");
-//    }
-//    
-//    public void Frost_Bomb(){
-//        System.out.printf("The enemy Rogue throws a Frost Bomb.\nTarget suffers -1 Speed for 2 turns.\nCosts Spirit\n");
-//    }
+
 }

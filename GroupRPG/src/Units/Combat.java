@@ -11,4 +11,9 @@ package Units;
  */
 public interface Combat {
     
+    public void Attack();
+    
+    public void Block();
+    
+    public void Recover();
 }

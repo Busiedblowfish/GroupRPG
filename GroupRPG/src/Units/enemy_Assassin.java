@@ -33,14 +33,17 @@ public class enemy_Assassin implements Statistics {
     @Override
     public int getSpirit(){ return spirit; }
     
-    private void setHealth(int h){ health = h; }
-    private void setEndurance(int e){ endurance =  e;}
-    private void setSpirit(int s){ spirit = s; }
+    @Override
+    public void setHealth(int h){ health += h; }
+    @Override
+    public void setEndurance(int e){ endurance +=  e;}
+    @Override
+    public void setSpirit(int s){ spirit += s; }
     
     
     /**
      *
-     * @return the formatted string version of Enemy_Assassin statistics
+     * @return Formatted string version of Enemy_Assassin statistics
      */
     @Override
     public String getCombineStat() 
@@ -59,21 +62,4 @@ public class enemy_Assassin implements Statistics {
         );
     }
     
-//    @Override
-//    public int Recover(){
-//        setHealth(getHealth() + 1); setEndurance(getEndurance() + 2); setSpirit(getSpirit() + 1); return 1;
-//    }
-//    
-//    @Override
-//    public int Attack(int Defender_health, int Attacker_damage){
-//        return Defender_health - Attacker_damage;
-//    }
-//        
-//    public void Puncturing_Bolt(){
-//        System.out.printf("The enemy Assassin fires a Puncturing Bolt.\nTarget suffers -1 Armor for 2 turns.\nCosts Endurance\n");
-//    }
-//    
-//    public void Poisonous_Bolt(){
-//        System.out.printf("The enemy Assassin fires a Poisonous Bolt.\nTarget suffers 1 damage for 2 turns.\nCosts Spirit\n");
-//    }
 }

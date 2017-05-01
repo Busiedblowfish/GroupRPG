@@ -747,15 +747,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
             Berserker berserker = new Berserker();
             factoryPlayer(berserker.getName());
             console2.setText("");
-            console2.append(berserker.getName() + "\n"
-                            + "Weapon: " + berserker.getWeapon() + "\n"
-                            + "Armor: " + berserker.getArmor() + "\n"
-                            + "Speed: " + berserker.getSpeed() + "\n"
-                            + "Attack: " + berserker.getAttack_s() + "\n"
-                            + "Block: " + berserker.getBlock_s() + "\n"
-                            + "Health: " + berserker.getHealth() + "\n"
-                            + "Endurance: " + berserker.getEndurance() + "\n"
-                            + "Spirit: " + berserker.getSpirit() + "\n");
+            console2.append(berserker.getCombineStat());
             
         }
         else if(STORY == 1 && !(btnPlayer1.isSelected())){
@@ -771,15 +763,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
             Statistics juggernaut = new Juggernaut();
             factoryPlayer(juggernaut.getName());
             console2.setText("");
-            console2.append(juggernaut.getName() + "\n"
-                            + "Weapon: " + juggernaut.getWeapon() + "\n"
-                            + "Armor: " + juggernaut.getArmor() + "\n"
-                            + "Speed: " + juggernaut.getSpeed() + "\n"
-                            + "Attack: " + juggernaut.getAttack_s() + "\n"
-                            + "Block: " + juggernaut.getBlock_s() + "\n"
-                            + "Health: " + juggernaut.getHealth() + "\n"
-                            + "Endurance: " + juggernaut.getEndurance() + "\n"
-                            + "Spirit: " + juggernaut.getSpirit() + "\n");
+            console2.append(juggernaut.getCombineStat());
 
         }
         else if(STORY == 1 && !(btnPlayer4.isSelected())){
@@ -796,15 +780,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
             Statistics barbarian = new Barbarian();
             factoryPlayer(barbarian.getName());
             console2.setText("");
-            console2.append(barbarian.getName() + "\n"
-                            + "Weapon: " + barbarian.getWeapon() + "\n"
-                            + "Armor: " + barbarian.getArmor() + "\n"
-                            + "Speed: " + barbarian.getSpeed() + "\n"
-                            + "Attack: " + barbarian.getAttack_s() + "\n"
-                            + "Block: " + barbarian.getBlock_s() + "\n"
-                            + "Health: " + barbarian.getHealth() + "\n"
-                            + "Endurance: " + barbarian.getEndurance() + "\n"
-                            + "Spirit: " + barbarian.getSpirit() + "\n");
+            console2.append(barbarian.getCombineStat());
         }
         else if(STORY == 1 && !(btnPlayer2.isSelected())){
             //Delete Unit from list
@@ -820,15 +796,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
             Statistics witchdr = new WitchDoctor();
             factoryPlayer(witchdr.getName());
             console2.setText("");
-            console2.append(witchdr.getName() + "\n"
-                            + "Weapon: " + witchdr.getWeapon() + "\n"
-                            + "Armor: " + witchdr.getArmor() + "\n"
-                            + "Speed: " + witchdr.getSpeed() + "\n"
-                            + "Attack: " + witchdr.getAttack_s() + "\n"
-                            + "Block: " + witchdr.getBlock_s() + "\n"
-                            + "Health: " + witchdr.getHealth() + "\n"
-                            + "Endurance: " + witchdr.getEndurance() + "\n"
-                            + "Spirit: " + witchdr.getSpirit() + "\n");
+            console2.append(witchdr.getCombineStat());
 
         }
         else if(STORY == 1 && !(btnPlayer3.isSelected())){
@@ -845,15 +813,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
             Statistics marksman = new Marksman();
             factoryPlayer(marksman.getName());
             console2.setText("");
-            console2.append(marksman.getName() + "\n"
-                            + "Weapon: " + marksman.getWeapon() + "\n"
-                            + "Armor: " + marksman.getArmor() + "\n"
-                            + "Speed: " + marksman.getSpeed() + "\n"
-                            + "Attack: " + marksman.getAttack_s() + "\n"
-                            + "Block: " + marksman.getBlock_s() + "\n"
-                            + "Health: " + marksman.getHealth() + "\n"
-                            + "Endurance: " + marksman.getEndurance() + "\n"
-                            + "Spirit: " + marksman.getSpirit() + "\n");
+            console2.append(marksman.getCombineStat());
             
             }
         else if(STORY == 1 && !(btnPlayer5.isSelected())){
@@ -873,15 +833,7 @@ public class GameGUI extends javax.swing.JFrame implements KeyListener {
                 Statistics psychic = new Psychic();
                 factoryPlayer(psychic.getName());
                 console2.setText("");
-                console2.append(psychic.getName() + "\n"
-                                + "Weapon: " + psychic.getWeapon() + "\n"
-                                + "Armor: " + psychic.getArmor() + "\n"
-                                + "Speed: " + psychic.getSpeed() + "\n"
-                                + "Attack: " + psychic.getAttack_s() + "\n"
-                                + "Block: " + psychic.getBlock_s() + "\n"
-                                + "Health: " + psychic.getHealth() + "\n"
-                                + "Endurance: " + psychic.getEndurance() + "\n"
-                                + "Spirit: " + psychic.getSpirit() + "\n");
+                console2.append(psychic.getCombineStat());
    
             }
             else if(STORY == 1 && !(btnPlayer6.isSelected()))

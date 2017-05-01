@@ -33,9 +33,13 @@ public class Barbarian implements Statistics {
     @Override
     public int getSpirit(){ return spirit; }
     
-    private void setHealth(int h){ health = h; }
-    private void setEndurance(int e){ endurance =  e;}
-    private void setSpirit(int s){ spirit = s; }
+    @Override
+    public void setHealth(int h){ health += h; }
+    @Override
+    public void setEndurance(int e){ endurance +=  e;}
+    @Override
+    public void setSpirit(int s){ spirit += s; }
+    
     
     
     /**
@@ -58,24 +62,4 @@ public class Barbarian implements Statistics {
             + "Spirit: " + this.getSpirit() + "\n"
         );
     }
-
-    
-//    @Override
-//    public int Recover(){
-//        setHealth(getHealth() + 1); setEndurance(getEndurance() + 2); setSpirit(getSpirit() + 1); return 1;
-//    }
-//    
-//    @Override
-//    public int Attack(int Defender_health, int Attacker_damage){
-//        return Defender_health - Attacker_damage;
-//    }
-        
-//    public void endrSkill_1(){ /*Uses endurance*/ }
-//    
-//    public void endrSkill_2(){ /*Uses endurance*/ }
-//    
-//    public void sprtSkill_1(){ /*Uses spirit */ }
-//    
-//    public void sprtSkill_2(){ /*Uses spirit*/ }
-
 }

@@ -6,7 +6,6 @@
 package Units;
 
 import java.awt.Font;
-import javax.swing.JLabel;
 
 /**
  *
@@ -61,13 +60,15 @@ public class viewCharacters extends javax.swing.JFrame {
         btnNewGame = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1005, 760));
+        setTitle("League of Warriors: Characters");
+        setPreferredSize(new java.awt.Dimension(1100, 760));
         setResizable(false);
         setSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTabbedPane3.setForeground(new java.awt.Color(51, 0, 153));
         jTabbedPane3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTabbedPane3.setPreferredSize(new java.awt.Dimension(1100, 650));
 
         jTabbedPane4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
@@ -142,7 +143,6 @@ public class viewCharacters extends javax.swing.JFrame {
         jPanel2.add(btnMarksman, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 310, 90));
         btnMarksman.getAccessibleContext().setAccessibleName("");
 
-        playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/grass.jpg"))); // NOI18N
         jPanel2.add(playerCharLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 0, 450, 570));
 
         jScrollPane1.setWheelScrollingEnabled(false);
@@ -157,7 +157,7 @@ public class viewCharacters extends javax.swing.JFrame {
         playerCharStat.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(playerCharStat);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 140, 220, 300));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 140, 310, 300));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel1.setText("Click a character's button to view its statistics");
@@ -168,6 +168,7 @@ public class viewCharacters extends javax.swing.JFrame {
         jTabbedPane3.addTab("Player", jTabbedPane4);
 
         jTabbedPane2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTabbedPane2.setPreferredSize(new java.awt.Dimension(1100, 607));
 
         jPanel4.setPreferredSize(new java.awt.Dimension(990, 570));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -233,8 +234,6 @@ public class viewCharacters extends javax.swing.JFrame {
             }
         });
         jPanel4.add(btnAssassin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 310, 90));
-
-        enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/grass.jpg"))); // NOI18N
         jPanel4.add(enemyCharLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 0, 450, 570));
 
         jScrollPane2.setWheelScrollingEnabled(false);
@@ -249,7 +248,7 @@ public class viewCharacters extends javax.swing.JFrame {
         enemyCharStat.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jScrollPane2.setViewportView(enemyCharStat);
 
-        jPanel4.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 140, 220, 300));
+        jPanel4.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 140, 310, 300));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel2.setText("Click a character's button to view its statistics");
@@ -259,28 +258,20 @@ public class viewCharacters extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 990, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1090, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 571, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("View Enemy Characters", jPanel3);
 
         jTabbedPane3.addTab("Enemy", jTabbedPane2);
 
-        getContentPane().add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 3, 1000, 650));
+        getContentPane().add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 3, -1, 650));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -292,7 +283,7 @@ public class viewCharacters extends javax.swing.JFrame {
                 btnExit1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnExit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 499, 70));
+        jPanel1.add(btnExit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 548, 70));
 
         btnNewGame.setFont(new java.awt.Font("Monospaced", 1, 36)); // NOI18N
         btnNewGame.setForeground(new java.awt.Color(255, 0, 0));
@@ -302,9 +293,9 @@ public class viewCharacters extends javax.swing.JFrame {
                 btnNewGameActionPerformed(evt);
             }
         });
-        jPanel1.add(btnNewGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 499, 70));
+        jPanel1.add(btnNewGame, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 548, 70));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 655, 1000, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 655, 1100, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -312,13 +303,25 @@ public class viewCharacters extends javax.swing.JFrame {
     private void btnBerserkerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBerserkerActionPerformed
         // TODO add your handling code here:
   
-    //Create a new instance of Berserker object
-    Berserker viewCharStat =  new Berserker();
-    //Add the picture of the character to playerLabel and display its statistic
-    playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/berserker1.jpg"))); // NOI18N
-    playerCharStat.setText(viewCharStat.getCombineStat());
-    playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-    playerCharStat.setEditable(false);
+        //Create a new instance of Berserker object
+        Berserker viewCharStat =  new Berserker();
+        //Add the picture of the character to playerLabel and display its statistic
+        try
+        {
+            playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/berserker1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            playerCharStat.setText(viewCharStat.getCombineStat());
+            playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            playerCharStat.setEditable(false);
+        }
     
     }//GEN-LAST:event_btnBerserkerActionPerformed
 
@@ -341,72 +344,145 @@ public class viewCharacters extends javax.swing.JFrame {
     private void btnBarbarianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBarbarianActionPerformed
         // TODO add your handling code here:
         
-    //Create a new instance of Barbarian object
-    Barbarian viewCharStat =  new Barbarian();
-    //Add the picture of the character to the playerLabel and display its statistic
-    playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/barbarian1.jpg"))); // NOI18N
-    playerCharStat.setText(viewCharStat.getCombineStat());
-    playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-    playerCharStat.setEditable(false);
+        //Create a new instance of Barbarian object
+        Barbarian viewCharStat =  new Barbarian();
+        //Add the picture of the character to playerLabel and display its statistic
+        try
+        {
+            playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/barbarian1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            playerCharStat.setText(viewCharStat.getCombineStat());
+            playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            playerCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnBarbarianActionPerformed
 
     private void btnWitchDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWitchDoctorActionPerformed
         // TODO add your handling code here:
         
-    //Create a new instance of Witch Doctor object
-    WitchDoctor viewCharStat =  new WitchDoctor();
-    //Add the picture of the character to playerLabel and display its statistic
-    playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/witch_doc1.jpg"))); // NOI18N
-    playerCharStat.setText(viewCharStat.getCombineStat());
-    playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-    playerCharStat.setEditable(false);
+        //Create a new instance of WitchDoctor object
+        WitchDoctor viewCharStat =  new WitchDoctor();
+        //Add the picture of the character to playerLabel and display its statistic
+        try
+        {
+            playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/witch_doc1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            playerCharStat.setText(viewCharStat.getCombineStat());
+            playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            playerCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnWitchDoctorActionPerformed
 
     private void btnJuggernautActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJuggernautActionPerformed
         // TODO add your handling code here:
         
-    //Create a new instance of Berserker object
-    Juggernaut viewCharStat =  new Juggernaut();
-    //Add the picture of the character to playerLabel and display its statistic
-    playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/juggernaut1.jpg"))); // NOI18N
-    playerCharStat.setText(viewCharStat.getCombineStat());
-    playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-    playerCharStat.setEditable(false);
+        //Create a new instance of Juggernaut object
+        Juggernaut viewCharStat =  new Juggernaut();
+        //Add the picture of the character to playerLabel and display its statistic
+        try
+        {
+            playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/juggernaut1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            playerCharStat.setText(viewCharStat.getCombineStat());
+            playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            playerCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnJuggernautActionPerformed
 
     private void btnMarksmanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMarksmanActionPerformed
         // TODO add your handling code here:
-    //Create a new instance of Marksman object
-    Marksman viewCharStat =  new Marksman();
-    //Add the picture of the character to playerLabel and display its statistic
-    playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/marksman1.jpg"))); // NOI18N
-    playerCharStat.setText(viewCharStat.getCombineStat());
-    playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-    playerCharStat.setEditable(false);
+        
+        //Create a new instance of Marksman object
+        Marksman viewCharStat =  new Marksman();
+        //Add the picture of the character to playerLabel and display its statistic
+        try
+        {
+            playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/marksman1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            playerCharStat.setText(viewCharStat.getCombineStat());
+            playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            playerCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnMarksmanActionPerformed
 
     private void btnPsychicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPsychicActionPerformed
         // TODO add your handling code here:
         
-    //Create a new instance of Berserker object
-    Psychic viewCharStat =  new Psychic();
-    //Add the picture of the character to playerLabel and display its statistic
-    playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psychic1.jpg"))); // NOI18N
-    playerCharStat.setText(viewCharStat.getCombineStat());
-    playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-    playerCharStat.setEditable(false);
+        //Create a new instance of Psychic object
+        Psychic viewCharStat =  new Psychic();
+        //Add the picture of the character to playerLabel and display its statistic
+        try
+        {
+            playerCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psychic1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            playerCharStat.setText(viewCharStat.getCombineStat());
+            playerCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            playerCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnPsychicActionPerformed
 
     private void btnWarlockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWarlockActionPerformed
         // TODO add your handling code here:
-        
+            
         //Create a new instance of enemy_Warlock object
         enemy_Warlock viewCharStat =  new enemy_Warlock();
-        //Add the picture of the character to playerLabel and display its statistic
-        enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/berserker1.jpg"))); // NOI18N
-        enemyCharStat.setText(viewCharStat.getCombineStat());
-        enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-        enemyCharStat.setEditable(false);
+        //Add the picture of the character to enemyLabel and display its statistic
+        try
+        {
+            enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psychic1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            enemyCharStat.setText(viewCharStat.getCombineStat());
+            enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            enemyCharStat.setEditable(false);
+        }
         
     }//GEN-LAST:event_btnWarlockActionPerformed
 
@@ -415,11 +491,23 @@ public class viewCharacters extends javax.swing.JFrame {
         
         //Create a new instance of enemy_Marauder object
         enemy_Marauder viewCharStat =  new enemy_Marauder();
-        //Add the picture of the character to playerLabel and display its statistic
-        enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/berserker1.jpg"))); // NOI18N
-        enemyCharStat.setText(viewCharStat.getCombineStat());
-        enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-        enemyCharStat.setEditable(false);
+        //Add the picture of the character to enemyLabel and display its statistic
+        try
+        {
+            enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psychic1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            enemyCharStat.setText(viewCharStat.getCombineStat());
+            enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            enemyCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnMarauderActionPerformed
 
     private void btnRogueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRogueActionPerformed
@@ -427,11 +515,23 @@ public class viewCharacters extends javax.swing.JFrame {
         
         //Create a new instance of enemy_Rogue object
         enemy_Rogue viewCharStat =  new enemy_Rogue();
-        //Add the picture of the character to playerLabel and display its statistic
-        enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/berserker1.jpg"))); // NOI18N
-        enemyCharStat.setText(viewCharStat.getCombineStat());
-        enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-        enemyCharStat.setEditable(false);
+        //Add the picture of the character to enemyLabel and display its statistic
+        try
+        {
+            enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psychic1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            enemyCharStat.setText(viewCharStat.getCombineStat());
+            enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            enemyCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnRogueActionPerformed
 
     private void btnSummonerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSummonerActionPerformed
@@ -439,11 +539,23 @@ public class viewCharacters extends javax.swing.JFrame {
         
         //Create a new instance of enemy_Summoner object
         enemy_Summoner viewCharStat =  new enemy_Summoner();
-        //Add the picture of the character to playerLabel and display its statistic
-        enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/berserker1.jpg"))); // NOI18N
-        enemyCharStat.setText(viewCharStat.getCombineStat());
-        enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-        enemyCharStat.setEditable(false);
+        //Add the picture of the character to enemyLabel and display its statistic
+        try
+        {
+            enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psychic1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            enemyCharStat.setText(viewCharStat.getCombineStat());
+            enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            enemyCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnSummonerActionPerformed
 
     private void btnBruteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBruteActionPerformed
@@ -451,11 +563,23 @@ public class viewCharacters extends javax.swing.JFrame {
         
         //Create a new instance of enemy_Brute object
         enemy_Brute viewCharStat =  new enemy_Brute();
-        //Add the picture of the character to playerLabel and display its statistic
-        enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/berserker1.jpg"))); // NOI18N
-        enemyCharStat.setText(viewCharStat.getCombineStat());
-        enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-        enemyCharStat.setEditable(false);
+        //Add the picture of the character to enemyLabel and display its statistic
+        try
+        {
+            enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psychic1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            enemyCharStat.setText(viewCharStat.getCombineStat());
+            enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            enemyCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnBruteActionPerformed
 
     private void btnAssassinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssassinActionPerformed
@@ -463,11 +587,23 @@ public class viewCharacters extends javax.swing.JFrame {
         
         //Create a new instance of enemy_Assassin object
         enemy_Assassin viewCharStat =  new enemy_Assassin();
-        //Add the picture of the character to playerLabel and display its statistic
-        enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/berserker1.jpg"))); // NOI18N
-        enemyCharStat.setText(viewCharStat.getCombineStat());
-        enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
-        enemyCharStat.setEditable(false);
+        //Add the picture of the character to enemyLabel and display its statistic
+        try
+        {
+            enemyCharLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/psychic1.jpg")));
+        }// NOI18N
+        catch(NullPointerException ex)
+        {
+            String message = ex.getMessage();
+            System.out.println(message);
+            System.out.println("Image file is missing!");
+        }
+        finally
+        {   
+            enemyCharStat.setText(viewCharStat.getCombineStat());
+            enemyCharStat.setFont(new Font("Monospaced", Font.BOLD, 18));
+            enemyCharStat.setEditable(false);
+        }
     }//GEN-LAST:event_btnAssassinActionPerformed
         
     
